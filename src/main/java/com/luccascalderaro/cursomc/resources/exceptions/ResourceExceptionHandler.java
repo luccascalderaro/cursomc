@@ -1,4 +1,4 @@
-package com.luccascalderaro.cursomc.resources.exception;
+package com.luccascalderaro.cursomc.resources.exceptions;
 
 import javax.servlet.http.HttpServletRequest;
 
