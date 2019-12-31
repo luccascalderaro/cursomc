@@ -1,4 +1,4 @@
-package com.luccascalderaro.cursomc.services.exceptions;
+package com.luccascalderaro.cursomc.resources.exceptions;
 
 import java.io.Serializable;
 
