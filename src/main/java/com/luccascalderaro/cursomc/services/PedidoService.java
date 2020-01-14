@@ -15,7 +15,6 @@ import com.luccascalderaro.cursomc.domain.enums.EstadoPagamento;
 import com.luccascalderaro.cursomc.repositories.ItemPedidoRepository;
 import com.luccascalderaro.cursomc.repositories.PagamentoRepository;
 import com.luccascalderaro.cursomc.repositories.PedidoRepository;
-import com.luccascalderaro.cursomc.repositories.ProdutoRepository;
 import com.luccascalderaro.cursomc.services.exceptions.ObjectNotFoundException;
 
 @Service
