@@ -15,6 +15,7 @@ import org.thymeleaf.context.Context;
 
 import com.luccascalderaro.cursomc.domain.Pedido;
 
+
 public abstract class AbstractEmailService implements EmailService {
 
 	@Value("${default.sender}")
@@ -70,9 +71,7 @@ public abstract class AbstractEmailService implements EmailService {
 		mmh.setSubject("Pedido Confirmado! Código: " + obj.getId());
 		mmh.setSentDate(new Date(System.currentTimeMillis()));
 		mmh.setText(htmlFromTemplatePedido(obj),true);
-		
-		
-		
+
 		return mimeMessage;
 	}
 
