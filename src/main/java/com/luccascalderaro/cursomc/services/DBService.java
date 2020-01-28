@@ -130,7 +130,7 @@ public class DBService {
 		estadoRepository.saveAll(Arrays.asList(e1,e2));
 		cidadeRepository.saveAll(Arrays.asList(c1,c2,c3));
 		
-		Cliente cli1 = new Cliente(null, "Maria Silva", "	", "4545169854", TipoCliente.PESSOAFISICA, pe.encode("123" ) );
+		Cliente cli1 = new Cliente(null, "Maria Silva", "luccashmc@hotmail.com", "4545169854", TipoCliente.PESSOAFISICA, pe.encode("123" ) );
 		cli1.getTelefones().addAll(Arrays.asList("5656565","8488484"));
 		
 		Cliente cli2 = new Cliente(null, "Ana Teste", "luccas.calderaro@gmail.com", "45454169854", TipoCliente.PESSOAFISICA, pe.encode("123" ) );
