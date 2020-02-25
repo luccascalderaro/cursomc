@@ -46,7 +46,7 @@ public class Pedido implements Serializable {
 	
 	
 	@OneToMany(mappedBy = "id.pedido")
-	private Set<ItemPedido> itens = new HashSet<>();
+	private Set<ItemPedido> items = new HashSet<>();
 	
 	
 	public Pedido() {
@@ -65,7 +65,7 @@ public class Pedido implements Serializable {
 	public double getValorTotal() {
 		double soma = 0.0;
 		
-		for(ItemPedido ip : itens) {
+		for(ItemPedido ip : items) {
 			soma = soma + ip.getSubTotal();
 		}
 		return soma;
@@ -111,12 +111,12 @@ public class Pedido implements Serializable {
 		this.enderecoDeEntrega = enderecoDeEntrega;
 	}
 	
-	public Set<ItemPedido> getItens() {
-		return itens;
+	public Set<ItemPedido> getItems() {
+		return items;
 	}
 
-	public void setItens(Set<ItemPedido> itens) {
-		this.itens = itens;
+	public void setItens(Set<ItemPedido> items) {
+		this.items = items;
 	}
 
 	@Override
@@ -158,7 +158,7 @@ public class Pedido implements Serializable {
 		builder.append(", Situação do pagamento: ");
 		builder.append(getPagamento().getEstado().getDescricao());
 		builder.append("\n Detalhes: \n");
-		for(ItemPedido ip: getItens()) {
+		for(ItemPedido ip: getItems()) {
 			builder.append(ip.toString());
 		}
 		

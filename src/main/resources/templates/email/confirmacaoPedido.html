@@ -28,15 +28,14 @@
 				<th>Preço unitário</th>
 				<th>Subtotal</th>
 			</tr>
-			<tr th:each="item : ${pedido.itens}">
+			<tr th:each="item : ${pedido.items}">
 				<td th:text="${item.produto.nome}">nome</td>
 				<td th:text="${item.quantidade}">quantidade</td>
 				<td	th:text="${#numbers.formatDecimal(item.preco, 0, 'POINT', 2,'COMMA')}">preco</td>
 				<td	th:text="${#numbers.formatDecimal(item.subTotal, 0, 'POINT', 2,'COMMA')}">subTotal</td>
 			</tr>
 		</table>
-		<p>
-			Valor total: <span th:text="${#numbers.formatDecimal(pedido.valorTotal, 0,'POINT', 2, 'COMMA')}"></span>
+		<p>Valor total: <span th:text="${#numbers.formatDecimal(pedido.valorTotal, 0,'POINT', 2, 'COMMA')}"></span>
 		</p>
 	</div>
 </body>

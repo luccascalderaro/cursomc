@@ -69,13 +69,17 @@ public class PedidoService {
 		}
 		obj = repo.save(obj);
 		pagamentoRepository.save(obj.getPagamento());
-		for (ItemPedido ip : obj.getItens()) {
+		for (ItemPedido ip : obj.getItems()) {
 			ip.setDesconto(0.0);
 			ip.setProduto(produtoService.find(ip.getProduto().getId()));
 			ip.setPreco(ip.getProduto().getPreco());
 			ip.setPedido(obj);
+			
 		}
-		itemPedidoRepository.saveAll(obj.getItens());
+		System.out.println("Lista de itens:::" + obj.getItems());
+	
+		itemPedidoRepository.saveAll(obj.getItems());
+	
 		
 		emailService.sendOrderConfirmationHtmlEmail(obj);
 		return obj;
